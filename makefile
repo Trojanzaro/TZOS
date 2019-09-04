@@ -7,6 +7,6 @@ main: kernel.c linker.ld boot.asm
 	$(CC) -T linker.ld -o .bin -ffreestanding -nostdlib boot.o kernel.o -lgcc
 	cp tzos.bin isodir/boot/tzos.bin
 	grub-mkrescue -o tzos.iso isodir
-
+	echo 'DONE!'
 clean:
 	rm ./*.o ./*.bin ./*.iso ./isodir/boot/*.bin
