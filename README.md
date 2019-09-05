@@ -27,8 +27,7 @@ tar -xf binutils-2.31.1.tar.xz
 rm binutils-2.31.1.tar.xz  
 mkdir build-binutils  
 cd build-binutils/  
-../binutils-2.31.1/configure --target=$TARGET --prefix="$PREFIX" \  
---with-sysroot --disable-nls --disable-werror  
+../binutils-2.31.1/configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror  
 make  
 make install
 ```
@@ -42,8 +41,7 @@ tar -xf gcc-7.4.0.tar.xz
 rm gcc-7.4.0.tar.xz  
 mkdir build-gcc  
 cd build-gcc  
-../gcc-7.4.0/configure --target=$TARGET --prefix="$PREFIX" \  
---disable-nls --enable-languages=c,c++ --without-headers  
+../gcc-7.4.0/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers  
 make all-gcc  
 make all-target-libgcc  
 make install-gcc  
