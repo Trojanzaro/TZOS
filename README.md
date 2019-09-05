@@ -11,14 +11,17 @@ Cross compiler required for this to work with the following steps for installati
 
 3. Setup some basic environmental variables 
 
-`export PREFIX="$HOME/opt/cross"
+```
+export PREFIX="$HOME/opt/cross"
 export TARGET=i686-elf
 export PATH="$PREFIX/bin:$PATH"
-mkdir ~/src`
+mkdir ~/src
+```
 
 4. Install the bin-utils
 
-`cd ~/src  
+```
+cd ~/src  
 wget https://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.xz  
 tar -xf binutils-2.31.1.tar.xz  
 rm binutils-2.31.1.tar.xz  
@@ -27,11 +30,13 @@ cd build-binutils/
 ../binutils-2.31.1/configure --target=$TARGET --prefix="$PREFIX" \  
 --with-sysroot --disable-nls --disable-werror  
 make  
-make install`
+make install
+```
 
 5. Install GCC with cross compiler settings
 
-`cd ~/src 
+```
+cd ~/src 
 wget https://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.xz
 tar -xf gcc-7.4.0.tar.xz  
 rm gcc-7.4.0.tar.xz  
@@ -42,19 +47,23 @@ cd build-gcc
 make all-gcc  
 make all-target-libgcc  
 make install-gcc  
-make install-target-libgcc`
+make install-target-libgcc
+```
 
 6. Set gcc env variable
 
-`export PATH=$HOME/opt/cross/bin:$PATH`
-
+```
+export PATH=$HOME/opt/cross/bin:$PATH
+```
 
 After that we should probably be able to compile the code using
  `i686-elf-gcc kernle.c -o kernel.o`
  
 to run the OS use: 
-`make`
-`qemu-system-i386 -cdrom tzos.iso`
+```
+make
+qemu-system-i386 -cdrom tzos.iso
+```
 
 Sources found here https://medium.com/@lduck11007/operating-systems-development-for-dummies-3d4d786e8ac
 
