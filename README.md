@@ -7,7 +7,7 @@ Cross compiler required for this to work with the following steps for installati
 
 1. Install dependencies
 
- $ sudo apt-get install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libcloog-isl-dev libisl-dev qemu grub-common xorriso nasm grub-pc-bin`
+ $ sudo apt-get install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libcloog-isl-dev libisl-dev qemu grub-common xorriso nasm grub-pc-bin
 
 3. Setup some basic environmental variables 
 
