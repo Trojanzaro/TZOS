@@ -54,7 +54,7 @@ After that we should probably be able to compile the code using
  
 to run the OS use: 
 `make`
-`qemu-system-i386 -cdrom basilica.iso`
+`qemu-system-i386 -cdrom tzos.iso`
 
 Sources found here https://medium.com/@lduck11007/operating-systems-development-for-dummies-3d4d786e8ac
 

@@ -4,8 +4,8 @@ i686-elf-gcc -T linker.ld -o tzos.bin -ffreestanding -O2 -nostdlib boot.o kernel
 
 grub-file --is-x86-multiboot tzos.bin
 
-echo -e 'menuentry "basilicau" {' > grub.cfg
-echo -e '\tmultiboot /boot/basilica.bin' >> grub.cfg
+echo -e 'menuentry "TZOS" {' > grub.cfg
+echo -e '\tmultiboot /boot/tzos.bin' >> grub.cfg
 echo -e '}' >> grub.cfg
 
 mkdir -p isodir/boot/grub
