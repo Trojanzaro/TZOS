@@ -1,7 +1,7 @@
 
 # TZOS
 
-just a simple attempt at a Kernl for a very limited OS
+just a simple attempt at a Kernel for a very limited OS
 
 Cross compiler required for this to work with the following steps for installation (Still not successful, I'll go through a few more attempts before I have enough of the VMs)
 
@@ -32,12 +32,12 @@ make install`
 5. Install GCC with cross compiler settings
 
 `cd ~/src 
-wget https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz
-tar -xf gcc-8.2.0.tar.xz  
-rm gcc-8.2.0.tar.xz  
+wget https://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.xz
+tar -xf gcc-7.4.0.tar.xz  
+rm gcc-7.4.0.tar.xz  
 mkdir build-gcc  
 cd build-gcc  
-../gcc-8.2.0/configure --target=$TARGET --prefix="$PREFIX" \  
+../gcc-7.4.0/configure --target=$TARGET --prefix="$PREFIX" \  
 --disable-nls --enable-languages=c,c++ --without-headers  
 make all-gcc  
 make all-target-libgcc  
